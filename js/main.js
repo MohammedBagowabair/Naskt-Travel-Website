@@ -912,6 +912,19 @@
         el.style.setProperty("--d", (i % 4) * 50 + "ms");
         io.observe(el);
       });
+      var cut = document.querySelector(".cut-a");
+      if (cut && window.matchMedia("(min-width: 1100px)").matches) {
+        var ticking = false;
+        window.addEventListener("scroll", function () {
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(function () {
+            var y = Math.min(window.scrollY, 520);
+            cut.style.transform = "translateY(" + (y * -0.08) + "px)";
+            ticking = false;
+          });
+        }, { passive: true });
+      }
     }
   });
 })();

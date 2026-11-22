@@ -99,21 +99,21 @@
   <main id="main">
     <div class="shell" id="top">
       <section class="hero-stage" aria-labelledby="hero-title">
-        <picture class="cut cut-a">
-          <source media="(min-width: 1180px)" srcset="assets/img/cut-man.webp" type="image/webp">
-          <img alt="" width="201" height="386" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
-        </picture>
-        <picture class="cut cut-b">
-          <source media="(min-width: 1180px)" srcset="assets/img/cut-yellow.webp" type="image/webp">
-          <img alt="" width="415" height="298" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
-        </picture>
         <div class="hero-frame">
-          <img class="hero-photo" src="assets/img/hero-800.webp" srcset="assets/img/hero-800.webp 800w, assets/img/hero-1400.webp 1400w" sizes="(min-width: 1200px) 1120px, calc(100vw - 24px)" width="1400" height="788" alt="فيلات على ماء فيروزي في المالديف، وحولها نخيل" data-i18n-alt="hero.alt" fetchpriority="high" decoding="async">
-          <div class="hero-copy">
-            <p class="eyebrow"><span class="mark" aria-hidden="true">—</span> <span class="script" data-i18n="hero.eye">على مزاجك</span></p>
-            <h1 id="hero-title" data-i18n-html="hero.title">اكتشف العالم على <span class="accent">طريقتك</span></h1>
-            <p class="lede" data-i18n="hero.lede">كوالالمبور، بالي، إسطنبول، دبي، والمالديف. نرتّب الطيران والإقامة والباقات، ثم نكمل التفاصيل معك على واتساب.</p>
-            <form class="book" id="book" action="#" method="get">
+          <div class="hero-clip">
+            <img class="hero-photo" src="assets/img/hero-800.webp" srcset="assets/img/hero-800.webp 800w, assets/img/hero-1400.webp 1400w" sizes="100vw" width="1400" height="788" alt="فيلات على ماء فيروزي في المالديف، وحولها نخيل" data-i18n-alt="hero.alt" fetchpriority="high" decoding="async">
+            <div class="hero-copy">
+              <h1 id="hero-title" data-i18n-html="hero.title">اكتشف العالم على <span class="accent">طريقتك</span></h1>
+              <p class="lede" data-i18n="hero.lede">كوالالمبور، بالي، إسطنبول، دبي، والمالديف. نرتّب الطيران والإقامة والباقات، ثم نكمل التفاصيل معك على واتساب.</p>
+              <p class="eyebrow"><span class="script" data-i18n="hero.eye">على مزاجك</span></p>
+            </div>
+          </div>
+          <picture class="cut cut-a">
+            <source media="(min-width: 1100px)" srcset="assets/img/cut-man.webp" type="image/webp">
+            <img alt="" width="201" height="386" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+          </picture>
+        </div>
+        <form class="book" id="book" action="#" method="get">
               <div class="tabs" role="tablist" data-i18n-aria="book.tabs" aria-label="نوع البحث">
                 <button type="button" role="tab" id="tab-flight" data-mode="flight" aria-selected="true" aria-controls="book-panel"><span data-i18n="book.flight">طيران</span></button>
                 <button type="button" role="tab" id="tab-hotel" data-mode="hotel" aria-selected="false" tabindex="-1" aria-controls="book-panel"><span data-i18n="book.hotel">فنادق</span></button>
@@ -134,9 +134,7 @@
               </div>
               <datalist id="places"></datalist>
               <p class="form-error" id="book-error" role="alert" hidden></p>
-            </form>
-          </div>
-        </div>
+        </form>
       </section>
 
       <div class="marquee" dir="ltr">
@@ -364,8 +362,8 @@
                 <div><b>DXB</b><span data-i18n="pass.from">دبي</span></div>
                 <div class="air" aria-hidden="true">
                   <svg viewBox="0 0 280 28" preserveAspectRatio="none">
-                    <line x1="0" y1="14" x2="280" y2="14" stroke="#1467C9" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
-                    <path d="M132 14l10-6 6 6-6 6z" fill="#16357A"/>
+                    <line x1="0" y1="14" x2="280" y2="14" stroke="#8f5606" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
+                    <path d="M132 14l10-6 6 6-6 6z" fill="#102824"/>
                   </svg>
                 </div>
                 <div><b>KUL</b><span data-i18n="pass.to">كوالالمبور</span></div>
@@ -461,6 +459,7 @@
               <button class="round" type="submit" data-i18n-aria="news.send" aria-label="إرسال"><svg class="flip" aria-hidden="true"><use href="#i-arrow"/></svg></button>
             </form>
             <p class="note" data-i18n="news.note">لن يصل شيء إلى بريد حقيقي بهذا العنوان المثال.</p>
+            <p class="badge-line" data-i18n="news.badge">لنستكشف المزيد • لنستكشف المزيد • </p>
           </div>
           <div class="stack">
             <img class="back" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="assets/img/news-back-900.webp" data-srcset="assets/img/news-back-640.webp 640w, assets/img/news-back-900.webp 900w" sizes="280px" width="900" height="1125" alt="مسبح محاط بالنخيل" data-i18n-alt="news.alt2" loading="lazy" fetchpriority="low" decoding="async">
@@ -482,7 +481,7 @@
     <footer class="footer">
       <div class="foot-grid">
         <div>
-          <a class="logo" href="#top"><span class="logo-en" style="color:#fff">naskt<i>.</i></span></a>
+          <a class="logo" href="#top"><span class="logo-en">naskt<i>.</i></span></a>
           <p data-i18n="foot.blurb">نسكت وكالة سفر خيالية في هذا الموقع التجريبي. لا حجوزات ولا مدفوعات من الصفحة. التواصل عبر واتساب فقط.</p>
           <div class="socials">
             <a data-wa="general" target="_blank" rel="noopener noreferrer" href="https://wa.me/967783964784" data-i18n-aria="wa.float" aria-label="واتساب نسكت"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>

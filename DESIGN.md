@@ -1,62 +1,54 @@
-# naskt. design notes
+# naskt. design
 
-Analysis of the 20 reference shots in the owner’s set (Tripzo, Travelo TNC, Stay Spot, Marvellous Escapes, Royagasht, Tourvia, TripMate, TripAero — including the AI planner and the design-system sheet). Names, logos, and copy from those shots are not reused.
+The page is an atlas opened on a table in late daylight. The ground is warm paper, the type is deep sea-green, and saffron appears only where someone can ask. The previous navy, blue, and orange pill system is the anti-reference: a SaaS travel template. This one is a single length of cloth — photographs graded like one dye, a traveller stepping off the plate, and a booking sheet laid across the bottom of the picture.
 
-## What the references share
+## Why this palette
 
-- A tinted page (powder blue, sage, or mist) with **white content in large rounded frames**, not edge-to-edge boxes. Tourvia and Stay Spot are the clearest examples: the page is the mat, the section is the card.
-- **Pill navigation** floating over the hero. Tourvia’s pattern is the one to follow: wordmark, quiet links, a ghost action, and a solid pill with a **circular arrow**. TripAero adds a glass bar and a second ghost (“Trip planner”).
-- **One photo-led hero** with the headline on the image and a booking bar lower down (TripAero / Stay Spot). Cut-out people break the frame on the sides (TripAero, Royagasht, Tripzo’s about block).
-- **Photo-first grids**: mixed bento for offers (TripAero), circles for destinations (Tripzo), horizontal trip cards with a duration chip and an orange “from” price (TripAero).
-- **Eyebrow before the heading** — an outlined pill (“— About Us”, Tourvia) or a small script line (“Exclusive Offers”, TripAero). The heading then picks out **one word in the accent colour**.
-- Soft shadow, 20–28px radii on frames, full pills on buttons and chips, lots of air. Motion is limited to marquees, carousels, and small reveals.
-- TripAero’s system sheet fixes the palette and the type: Plus Jakarta Sans, navy / bright blue / orange, and a boarding-pass component with a dotted route.
-
-Travelo TNC (green) and Marvellous Escapes (darker, more editorial) were used as contrast, not as the palette. TripMate contributed the **filter pills** and the way a booking card sits on a bright scene. Stay Spot contributed the newsletter split, the tilted photo, the rotating “Let’s explore more” badge, and the testimonial rail.
-
-## Palette
+The audience is international and Gulf, reading Arabic first, and the only conversion is a WhatsApp enquiry. A cool blue product UI makes the enquiry look like a software button. Sea-green ink (`#102824`) on sand paper (`#efe4d0`) reads as a printed page. Saffron (`#e2a322`) is the sun on that page: it fills the search button, the WhatsApp mark, and the active tab underline. Words that must stay readable on paper use a darker saffron (`#8f5606`, about 4.8:1). Secondary text is `#2f4a40` (about 7.7:1 on the paper), never a neutral gray.
 
 | Token | Hex | Use |
 | --- | --- | --- |
-| Navy | `#16357A` | Wordmark, headings on tint, filled arrow discs, footer |
-| Navy deep | `#102652` | Footer ground, hero scrim |
-| Blue | `#1467C9` | Links, icons, active chips, info surfaces. Dark enough for white label text |
-| Blue bright | `#1E88F5` | Decorative only, large areas |
-| Orange | `#FF7A1A` | Primary buttons (with near-black text), highlights |
-| Orange ink | `#C2410C` | Prices and the coloured word in headings on white (AA) |
-| Tint | `#EAF3FE` | Page wash, blobs, soft panels |
-| Ink | `#142033` | Body text |
-| Ink soft | `#3D4C63` | Secondary text, still ≥ 4.5:1 on white |
-| Yellow chip | `#FFE08A` / `#4A2E00` | Offer codes that name a theme, not a discount |
-| Line | `#D5E2F2` | Hairline borders |
-
-White text is not used on `#FF7A1A`. The primary pill is orange with `#1A1208` text and a navy arrow disc.
+| Paper | `#EFE4D0` | Page ground |
+| Paper raised | `#F6EFE2` | The booking sheet and the sample ticket |
+| Paper deep | `#E5D6BC` | Quiet bands |
+| Ink | `#102824` | Type, rules, footer |
+| Ink soft | `#2F4A40` | Ledes, labels, notes |
+| Saffron | `#E2A322` | The one action fill. Ink text on it |
+| Saffron ink | `#8F5606` | Accent words, links, captions on paper |
+| Line | `#CBBFA6` | Hairlines |
 
 ## Type
 
-- Latin: **Plus Jakarta Sans** (400, 600, 700, 800), self-hosted.
-- Arabic UI: **IBM Plex Sans Arabic** (400, 700), self-hosted. This is the default, because the page opens in Arabic.
-- Eyebrows only: **Aref Ruqaa** in Arabic, **Caveat** in English. Nowhere else.
-- Scale: 12 / 14 / 16 / 18 / 22 / 32 / fluid display up to ~64px. Headings use `text-wrap: balance`. Arabic body line-height is 1.65. No letter-spacing on Arabic.
+Two families, both with Arabic and Latin, self-hosted.
 
-## Components
+- **Reem Kufi** 700 for headlines and the wordmark. A kufi with a point of view, large and architectural, not a Latin serif pasted onto Arabic.
+- **Markazi Text** 400 and 600 for body, navigation, and forms. A newspaper face that stays readable at interface sizes.
 
-- Floating glass pill nav; on small screens it collapses to logo, language, and a menu button that opens a sheet.
-- Hero frame (radius 32px) + glass booking card with tabs (Flights / Hotels / Holidays).
-- Service marquee (words, not partner logos).
-- Offer bento, 4 tiles, yellow theme chip.
-- Destination circles + filter pills.
-- Trip scroller: photo, place, title, duration chip, orange “from” price, heart (local only).
-- About split with a cut-out traveller on a soft blob.
-- Why-rows: icon, title, copy, rounded photo.
-- Scripted planner card (chips, typed reply, sample trip, WhatsApp).
-- Boarding-pass sample beside three booking steps.
-- Three example-team cards.
-- Stories: one large, three small, “read more” opens the rest of the note.
-- Testimonial rail marked as layout samples.
-- Newsletter split with a rotating badge.
-- Navy footer, round corners, and a floating WhatsApp button.
+No negative letter-spacing, including on English. Display size stops at `4.8rem` on the hero so Arabic lines stay intact. Body is `1.2rem` with a measure near 38rem.
 
-## Product constraints baked into the UI
+## Material
 
-Prices, offer chips, the planner, the team, and the testimonial cards are labelled as demonstrations. There is no cart, account, or star rating. Every enquiry goes to one WhatsApp number. Layout uses logical CSS properties so Arabic RTL and English LTR share one stylesheet.
+A tiled photographic grain (`assets/img/grain.webp`) sits over the page at low opacity with `mix-blend-mode: multiply` and `pointer-events: none`. Photographs share one grade: slightly desaturated, a little contrast, a little sepia. Cut-out people are left ungraded so they stay photographic. Corners are square. Depth comes from overlap — the traveller over the plate, the booking sheet over the photograph — not from shadows on cards.
+
+## Composition
+
+- Masthead: a full-width paper bar, hairline below, wordmark, text links, one saffron enquiry. On small screens it opens a paper sheet, not a floating card.
+- Hero: the Maldives plate is full-bleed. The headline sits on the photograph in paper-coloured type. A cut-out traveller with a hat, backpack, and camera breaks the bottom edge. The working flight / hotel / holiday form is a paper sheet across that edge, in the first viewport on a desktop screen. On a phone and a tablet the photograph crops first, then the headline and the form stack on the paper so the type never sits on the water.
+- Offers: one tall plate and a column of the others, captions underneath, theme words as small labels. Not four equal cards.
+- Destinations: an uneven photo index. Kuala Lumpur and the Maldives take a double row. Filters are underlined words.
+- Trips: a sideways rack of plates, type on the paper below, a heart that stays on this device.
+- About: the backpacker stands beside the copy. No blob.
+- Why: alternating photograph and text. No icon tiles.
+- Planner: a letter, prewritten, labelled as a demonstration. The woman with the camera sits at the side on a wide screen.
+- Booking steps sit next to a paper ticket, DXB to KUL, marked as not a booking.
+- Team, notes, and the sample quote rail keep their demo labels. Quotes are lines of type; the centred one turns to ink.
+- Newsletter: two overlapping photographs and an underline field.
+- Footer: the same ink as the type, paper-coloured words, saffron only on the small headings.
+
+## Motion
+
+One drift: the hero traveller shifts slightly as the page scrolls, on wide screens only. Sections ease in when they arrive. The word ticker pauses on hover. `prefers-reduced-motion` removes the drift, the ticker duplication, and the entrances. Content is visible without JavaScript.
+
+## Product rules that the design does not touch
+
+Arabic is the default. English is the same page. Every enquiry uses `https://wa.me/967783964784`. From starts empty. Prices, the planner, the team, and the quote frames stay labelled as demonstrations. There is no cart.
