@@ -21,14 +21,14 @@ The audience is international and Gulf, reading Arabic first, and the only conve
 
 Two families, both with Arabic and Latin, self-hosted.
 
-- **Reem Kufi** 700 for headlines and the wordmark. A kufi with a point of view, large and architectural, not a Latin serif pasted onto Arabic.
+- **El Messiri** 700 for headlines and the wordmark. A clear editorial Arabic with distinct letterforms at display size, including kaf, so a word like طريقتك stays readable when it is huge.
 - **Markazi Text** 400 and 600 for body, navigation, and forms. A newspaper face that stays readable at interface sizes.
 
-No negative letter-spacing, including on English. Display size stops at `4.8rem` on the hero so Arabic lines stay intact. Body is `1.2rem` with a measure near 38rem.
+No negative letter-spacing, including on English. The hero headline runs up to `6rem`. Body is `1.2rem` with a measure near 38rem.
 
 ## Material
 
-A tiled photographic grain (`assets/img/grain.webp`) sits over the page at low opacity with `mix-blend-mode: multiply` and `pointer-events: none`. Photographs share one grade: slightly desaturated, a little contrast, a little sepia. Cut-out people are left ungraded so they stay photographic. Corners are square. Depth comes from overlap — the traveller over the plate, the booking sheet over the photograph — not from shadows on cards.
+A very low-contrast grain (`assets/img/grain.webp`) is the paper’s tooth. It is painted into the paper backgrounds only, so photographs stay clean. The photographs themselves are slightly richer than the source files: a little more saturation and contrast, no sepia. Cut-out people are left ungraded. Corners are square. Depth comes from overlap — the traveller over the plate, the booking sheet over the photograph — not from shadows on cards.
 
 ## Composition
 
