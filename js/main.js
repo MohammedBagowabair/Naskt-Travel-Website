@@ -21,7 +21,7 @@
       "lang.short": "EN",
       "hero.eye": "على مزاجك",
       "hero.title": "اكتشف العالم على <span class=\"accent\">طريقتك</span>",
-      "hero.lede": "من صنعاء وعدن إلى كوالالمبور وبالي وإسطنبول ودبي. نرتّب الطيران والإقامة والباقات، ثم نكمل التفاصيل معك على واتساب.",
+      "hero.lede": "كوالالمبور، بالي، إسطنبول، دبي، والمالديف. نرتّب الطيران والإقامة والباقات، ثم نكمل التفاصيل معك على واتساب.",
       "hero.alt": "فيلات على ماء فيروزي في المالديف، وحولها نخيل",
       "book.flight": "طيران",
       "book.hotel": "فنادق",
@@ -36,7 +36,7 @@
       "book.guests": "الضيوف",
       "book.depart": "المغادرة",
       "book.search": "ابحث",
-      "book.phFrom": "صنعاء",
+      "book.phFrom": "من أين؟",
       "book.phTo": "إلى أين؟",
       "book.errTo": "اكتب الوجهة أولاً.",
       "book.errDate": "اختر التاريخ.",
@@ -126,7 +126,7 @@
       "about.f2.t": "تنسيق مباشر",
       "about.f2.d": "من السؤال الأول حتى موعد الوصول، الرد في المحادثة نفسها.",
       "about.cta": "ابدأ المحادثة",
-      "about.alt": "مسافرة بحقيبة، وقد أزيلت خلفية الصورة",
+      "about.alt": "مسافرة بحقيبة ظهر، وقد أزيلت خلفية الصورة",
       "why.eye": "لماذا نسكت",
       "why.title": "ترتيب أوضح في <span class=\"accent\">كل خطوة</span>",
       "why.1.t": "حجز بلا تعقيد",
@@ -158,7 +158,7 @@
       "how.alt": "جناح طائرة فوق الغيوم",
       "pass.brand": "نموذج بطاقة",
       "pass.demo": "ليس حجزاً",
-      "pass.from": "صنعاء",
+      "pass.from": "دبي",
       "pass.to": "كوالالمبور",
       "pass.pax": "المسافر",
       "pass.flight": "الرحلة",
@@ -242,7 +242,7 @@
       "lang.short": "ع",
       "hero.eye": "In your own time",
       "hero.title": "Experience the World, <span class=\"accent\">Your Way</span>",
-      "hero.lede": "From Sana'a and Aden to Kuala Lumpur, Bali, Istanbul, and Dubai. We line up flights, stays, and holidays, then finish the details with you on WhatsApp.",
+      "hero.lede": "Kuala Lumpur, Bali, Istanbul, Dubai, and the Maldives. We line up flights, stays, and holidays, then finish the details with you on WhatsApp.",
       "hero.alt": "Overwater villas on turquoise sea in the Maldives, with palm trees",
       "book.flight": "Flights",
       "book.hotel": "Hotels",
@@ -257,7 +257,7 @@
       "book.guests": "Guests",
       "book.depart": "Departure",
       "book.search": "Search",
-      "book.phFrom": "Sana'a",
+      "book.phFrom": "From where?",
       "book.phTo": "Where to?",
       "book.errTo": "Add a destination first.",
       "book.errDate": "Choose a date.",
@@ -347,7 +347,7 @@
       "about.f2.t": "One conversation",
       "about.f2.d": "From the first question to arrival, the reply stays in the same chat.",
       "about.cta": "Start the chat",
-      "about.alt": "A traveller with a suitcase, background removed",
+      "about.alt": "A traveller with a backpack, background removed",
       "why.eye": "Why naskt",
       "why.title": "Clearer at <span class=\"accent\">every step</span>",
       "why.1.t": "Seamless booking",
@@ -379,7 +379,7 @@
       "how.alt": "An aircraft wing above the clouds",
       "pass.brand": "Sample pass",
       "pass.demo": "Not a booking",
-      "pass.from": "Sana'a",
+      "pass.from": "Dubai",
       "pass.to": "Kuala Lumpur",
       "pass.pax": "Passenger",
       "pass.flight": "Flight",
@@ -539,8 +539,8 @@
 
   var PRICES = { kl: "$640", lgk: "$580", bali: "$890", ist: "$720", dxb: "$540", mld: "$1,150", cai: "$610", bak: "$680" };
   var CITIES = {
-    ar: ["صنعاء", "عدن", "كوالالمبور", "لنكاوي", "بالي", "إسطنبول", "دبي", "المالديف", "القاهرة", "باكو"],
-    en: ["Sana'a", "Aden", "Kuala Lumpur", "Langkawi", "Bali", "Istanbul", "Dubai", "Maldives", "Cairo", "Baku"]
+    ar: ["دبي", "الدوحة", "الرياض", "الكويت", "مسقط", "كوالالمبور", "لنكاوي", "بالي", "إسطنبول", "المالديف", "القاهرة", "باكو"],
+    en: ["Dubai", "Doha", "Riyadh", "Kuwait", "Muscat", "Kuala Lumpur", "Langkawi", "Bali", "Istanbul", "Maldives", "Cairo", "Baku"]
   };
 
   var lang = "ar";
@@ -592,10 +592,6 @@
     refreshFavLabels();
     renderPlan(currentPlan, false);
     setMode(mode);
-    var from = document.getElementById("from");
-    if (from && (from.value === "صنعاء" || from.value === "Sana'a" || from.value === "")) {
-      from.value = lang === "ar" ? "صنعاء" : "Sana'a";
-    }
     if (announce) {
       var live = document.getElementById("status");
       if (live) live.textContent = t("status.lang");
