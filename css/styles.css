@@ -628,7 +628,9 @@ html[dir="rtl"] .point-end { transform: none; }
   color: var(--navy);
   display: grid;
   place-items: center;
+  overflow: hidden;
 }
+.arrows button svg, .round svg { width: 18px; height: 18px; display: block; }
 .arrows button:hover, .round:hover { background: var(--tint); }
 .track {
   display: flex;
